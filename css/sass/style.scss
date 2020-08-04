@@ -1,0 +1,60 @@
+@import "_mixins", "_variable";
+
+.Head {
+    @include DefaultBox(100%, 626px);
+    float: left;
+}
+.Head-background {
+    @include DefaultBox(100%, 626px);
+    margin: 0;
+    img {
+        width: 100%;
+        max-height: 100%;
+    }
+}
+.Head-menu {
+    @include DefaultBox(100%, 80px);
+    position: absolute;
+}
+.Head-menu-text {
+    @include DefaultBox(25%, 100%);
+    float: left;
+    h1 {
+        color: $colorGreen;
+        margin: 15px 25px;
+    }
+}
+.Head-menu-panel {
+   @include DefaultBox(75%, 100%);
+   float: left;
+    nav {
+        @include DefaultBox(50%, 50%);
+        display: block;
+        float: right;
+        margin-right: 100px;
+        ul {
+            display: inline-block;
+            word-spacing: 30px;
+            :last-child {
+                word-spacing: normal;
+            }
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.Head-text-title {
+    @include DefaultBox(400px, 400px);
+    background-color: rgba(255,255,255, 1);
+    position: absolute;
+    margin: 150px 120px;
+    border-radius: 10px;
+    h2 {
+        color: black;
+        margin: 10px 70px;
+    }
+}
