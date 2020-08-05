@@ -1,5 +1,8 @@
 @import "_mixins", "_variable";
 
+input {
+    outline: none;
+}
 .Head {
     @include DefaultBox(100%, 626px);
     float: left;
@@ -13,48 +16,45 @@
     }
 }
 .Head-menu {
-    @include DefaultBox(100%, 80px);
+    @include DefaultBox(100%, 70px);
+    border-bottom: solid #6ee70a 2px;
     position: absolute;
 }
 .Head-menu-text {
     @include DefaultBox(25%, 100%);
     float: left;
+    background-color: rgba(0,0,0, 0.4);
     h1 {
         color: $colorGreen;
-        margin: 15px 25px;
+        margin: 7px 25px;
+        font-family: 'Waltograph';
+        font-size: 40px;
     }
 }
 .Head-menu-panel {
    @include DefaultBox(75%, 100%);
    float: left;
+   background-color: rgba(0,0,0, 0.4);
     nav {
-        @include DefaultBox(50%, 50%);
+        @include DefaultBox(70%, 100%);
         display: block;
         float: right;
-        margin-right: 100px;
         ul {
             display: inline-block;
-            word-spacing: 30px;
-            :last-child {
-                word-spacing: normal;
-            }
+            margin: 18px 0 0 0;
             a {
                 text-decoration: none;
                 color: white;
-                font-size: 20px;
+                font-size: 27px;
                 font-weight: bold;
+                font-family: 'Waltograph';
+                margin: 0 30px;
+                color: #6ee70a;
             }
         }
     }
 }
 .Head-text-title {
-    @include DefaultBox(400px, 400px);
-    background-color: rgba(255,255,255, 1);
     position: absolute;
-    margin: 150px 120px;
-    border-radius: 10px;
-    h2 {
-        color: black;
-        margin: 10px 70px;
-    }
+    margin: 120px 100px;
 }
